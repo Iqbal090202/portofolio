@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+:root{
+    font-size: 16px;
+    font-family: 'Fredoka One', cursive;
+    --color1: #324851;
+    --color2: #86ac41;
+    --color3: #34675C;
+    --color4: #7DA3A1;
+    --color5: #ccc;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* scroll-snap-type: y mandatory; */
+}
+
+body {
+    margin: 0;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: var(--color3);
+    display: flex;
+    justify-content: center;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5vw;
+    position: absolute
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--color3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--color2);
+}
+
+.container {
+    width: 95%;
+    min-height: 95%;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    height: 95vh;
+    flex-direction: column;
+    background-image: url(../img/foto-header.png);
+    background-color: var(--color2);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#canvas {
+    position: absolute;    
+    width: 95%;
+    height: 95vh;
+}
+
+.shadow-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.nama {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: context-menu;
+    letter-spacing: 2rem;
+    margin: 6rem;
+    padding-left: 2rem;
+}
+
+.nama-depan {
+    position: relative;
+    padding: 0.5em;
+    color: var(--color5);
+    animation: muncul-nama-depan 1.5s;
+}
+
+@keyframes muncul-nama-depan {
+    from {
+        top: -0.5em;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.nama-belakang {
+    position: relative;
+    color: var(--color1);
+    animation: muncul-nama-belakang 1s;
+    text-shadow: 0 0 2px #ccc, 0 0 4px #ccc, 0 0 6px #ccc;
+}
+
+@keyframes muncul-nama-belakang {
+    from {
+        top: 0.5em;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.downBtn {
+    display: flex;
+    background-color: var(--color1);
+    color: var(--color5);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.bungkus {
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    color: var(--color1);
+    background-color: var(--color1);
+    height: 100vh;
+    z-index: 1 !important;
+}
+
+.bungkus-judul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2em;
+    opacity: 0;
+}
+
+.judul-aboutme, .judul-edex, .judul-port {
+    padding: 1em;
+    padding-top: 0.75em;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: var(--color2);
+}
+
+#isiAboutme {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    color: var(--color4);
+    width: 100%;
+    height: 100%;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+
+.wrapTextAboutme {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-aboutme {
+    width: 50%;
+}
+
+#h {
+    font-size: 2.5rem;
+}
+
+.wrapWicd {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wicd {
+    background: #000;
+    align-self: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 70%;
+    height: 80%;
+    background-color: var(--color1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.kotak-wicd {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color5);
+}
+
+.kotak-wicd span {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.isi-wicd {
+    display: flex;
+    padding: .5rem;
+    padding-left: .3rem;
+    overflow-x: scroll;
+}
+
+.isi-wicd div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: .2rem;
+    margin-right: .2rem;
+    width: 12rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.wrapLogo .logo {
+    width: 100%;
+    height: 80%;
+}
+
+.wrapLogo .textLogo {
+    color: var(--color2);
+    height: 20%;
+}
+
+.logo svg {
+    transition: 500ms ease;
+    width: 75%;
+    height: 75%;
+}
+
+.logo svg:hover {
+    width: 80%;
+    height: 80%;
+}
+
+#jaboutme {
+    position:-webkit-sticky;
+    position:sticky;
+}
+
+
+#isiedex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.edexWrap{
+    width: 80%;
+    height: 90%;
+    color: var(--color2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+
+.eduWrap {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: .5rem;
+}
+
+.edu1, .edu2, .expWrap {
+    display: flex;
+    flex-direction: column;
+    border: .25rem dashed var(--color2);
+    padding: 2rem;
+}
+
+.edex2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+}
+
+.edex05 {
+    text-align: end;
+    margin-bottom: .5rem;
+}
+
+.edex13 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.edex12 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.exdesc {
+    text-align: justify;
+    text-indent: 2rem;
+    margin-bottom: 2rem;
+}
+
+#port {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+#isiport {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+}
+
+.wrapPort {
+    padding: 2rem;
+    padding-top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.wrapPort img {
+    width: 100%;
+}
