@@ -60,6 +60,9 @@ window.onscroll = () => {
     let downBtn = document.getElementById("downBtn")
     downBtn.style.transform = `translate(0, ${wsc / 2}%)`
 
+    let icons = document.getElementById("icons")
+    icons.style.transform = `translate(0, ${wsc / 2}%)`
+
     let canvas = document.getElementById("canvas")
     canvas.style.transform = `translate(0, ${wsc / 30}%)`
 

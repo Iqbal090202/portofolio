@@ -12,7 +12,6 @@
 
 html {
     scroll-behavior: smooth;
-    /* scroll-snap-type: y mandatory; */
 }
 
 body {
@@ -34,7 +33,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--color2);
+    background: var(--color4);
 }
 
 .container {
@@ -79,7 +78,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
     cursor: context-menu;
     letter-spacing: 2rem;
-    margin: 6rem;
+    margin: 8rem;
     padding-left: 2rem;
 }
 
@@ -129,6 +128,29 @@ body::-webkit-scrollbar-thumb {
     padding-right: 2rem;
     border-radius: 50px;
     text-decoration: none;
+    margin-bottom: 1rem;
+    z-index: 1 !important;
+}
+
+.icons {
+    display: flex;
+    font-size: 1.3rem;
+}
+
+.icons a {
+    color: var(--color5);
+}
+
+.wrapicon {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 9px;
+    padding-right: 9px;
+    border-radius: 50px;
+    background-color: rgba(31, 45, 51, 0.75);
+    z-index: 1 !important;
 }
 
 .bungkus {
@@ -163,7 +185,7 @@ body::-webkit-scrollbar-thumb {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    color: var(--color4);
+    color: var(--color5);
     width: 100%;
     height: 100%;
     line-height: 1.5em;
@@ -351,4 +373,61 @@ body::-webkit-scrollbar-thumb {
 
 .wrapPort img {
     width: 100%;
+}
+
+#kontak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95vh;
+}
+
+#isikontak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+}
+
+#isikontak form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+}
+
+#btnsubres {
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnsubres input {
+    cursor: pointer;
+}
+
+input, textarea {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    background-color: var(--color5);
+    border: none;
+    border-bottom: 3px solid var(--color3);
+    font-size: 1.1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    outline: none;
+    color: var(--color1);
+    border-radius: 10px;
+    word-spacing: .1rem;
+    max-width: 100%;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    color: var(--color2);
 }
