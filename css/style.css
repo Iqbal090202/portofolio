@@ -154,8 +154,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bungkus {
-    display: grid;
-    grid-template-rows: 1fr 6fr;
+    display: flex;
+    flex-direction: column;
     color: var(--color1);
     background-color: var(--color1);
     height: 100vh;
@@ -433,3 +433,52 @@ input, textarea {
     height: 10%;
     color: var(--color2);
 }
+
+@media screen and (max-width: 576px) { 
+
+    .nama {
+        font-size: 1.5rem;
+        letter-spacing: 1.5rem;
+    }
+    .bungkus-judul {
+        font-size: 1.5rem;
+    }
+    .bungkus-isi {
+        font-size: .8rem;
+    }
+    .text-aboutme {
+        width: 70%;
+    }
+    .kotak-wicd span {
+        font-size: 1rem;
+        line-height: 0;
+    }
+    .wicd {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+    }
+    .kotak-wicd {
+        height: 10%;
+    }
+    .isi-wicd {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+/* 
+@media (min-width: 576px) { ... }
+
+// md --- Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// lg --- Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// xl --- Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
