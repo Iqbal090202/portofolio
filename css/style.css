@@ -404,10 +404,6 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
 }
 
-#btnsubres input {
-    cursor: pointer;
-}
-
 input, textarea {
     margin-top: .5rem;
     margin-bottom: .5rem;
@@ -423,6 +419,12 @@ input, textarea {
     border-radius: 10px;
     word-spacing: .1rem;
     max-width: 100%;
+}
+
+#btnsubres input {
+    cursor: pointer;
+    background-color: #86ac41;
+    font-weight: bold;
 }
 
 .footer {
